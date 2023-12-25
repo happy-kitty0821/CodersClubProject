@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <%- include('../head.ejs')%>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hello World</title>
+</head>
+<body>
+    <%- include('../navigate.ejs')%>
+        <main>
+            <% books.forEach((book)=>{ %>
+                <div class = "body-div">
+                    <img src="<%= book.image %>" />
+                    <p class="bookTitle">
+                        <%= book.title%>
+                    </p>
+                </div>
+                <% }) %>
+        </main> 
+</body>
+</html>
